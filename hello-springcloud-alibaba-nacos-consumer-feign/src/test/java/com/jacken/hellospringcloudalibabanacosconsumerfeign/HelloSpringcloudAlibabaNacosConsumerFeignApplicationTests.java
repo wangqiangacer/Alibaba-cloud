@@ -1,10 +1,10 @@
-package com.jacken.hellospringcloudalibabanacosconsumer;
+package com.jacken.hellospringcloudalibabanacosconsumerfeign;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelloSpringcloudAlibabaNacosConsumerApplicationTests {
+class HelloSpringcloudAlibabaNacosConsumerFeignApplicationTests {
 
     @Test
     void contextLoads() {
