@@ -12,5 +12,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface NacosProviderService {
 
     @RequestMapping("/echo/{message}")
-    public  String echo(@PathVariable(value = "message") String message);
+    String echo(@PathVariable(value = "message") String message);
 }

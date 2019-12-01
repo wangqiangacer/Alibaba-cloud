@@ -10,32 +10,28 @@
     </parent>
 
     <groupId>com.jacken</groupId>
-    <artifactId>hello-springcloud-alibaba-nacos-consumer-feign</artifactId>
+    <artifactId>hello-springcloud-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hello-springcloud-alibaba-nacos-consumer-feign</name>
+    <name>hello-springcloud-gateway</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>runtime</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
+            <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -53,24 +49,21 @@
             <version>2.0.1.RELEASE</version>
         </dependency>
 
-<!--        sentinel  实现熔断器和限流-->
+        <!--        sentinel  实现熔断器和限流-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-transport-simple-http</artifactId>
-            <version>1.4.0</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
         </dependency>
-
-
     </dependencies>
 
     <build>
@@ -78,9 +71,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.jacken.hellospringcloudalibabanacosconsumerfeign.HelloSpringcloudAlibabaNacosConsumerFeignApplication</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>

@@ -19,4 +19,9 @@ public class NacosProviderController {
         return nacosProviderService.echo(message);
 
     }
+
+    @RequestMapping("/user")
+    public  String getUser(){
+        return "wangqiang";
+    }
 }
