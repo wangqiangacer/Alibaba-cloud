@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: spring-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # 使用sentinel作为熔断器
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8721
+        #路由网关配置 设置服务发现组件结合，这样可以采用服务名的路由策略  注册到nacos 通过服务名请求服务的地址
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          #配置路由规则
+      routes:
+#        - id: NACOS-CONSUMER
+#          uri: lb://nacos-consumer
+#          predicates:
+#            - Method=GET,POST
+        - id: NACOS-CONSUMER-FEIGN
+          uri: lb://nacos-consumer-feign
+          predicates:
+            - Method=GET,POST
+feign:
+  sentinel:
+    enabled: true
+#配置日志级别
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 9090

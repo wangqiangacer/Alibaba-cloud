@@ -8,45 +8,23 @@
         <version>2.2.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.jacken</groupId>
     <artifactId>hello-springcloud-alibaba</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hello-springcloud-alibaba</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+    <modules>
+    <module>hello-springcloud-alibaba-dependences</module>
+    <module>hello-springcloud-alibaba-nacos</module>
+    <module>hello-springcloud-alibaba-nacos-consumer</module>
+    <module>hello-springcloud-alibaba-nacos-consumer-feign</module>
+    <module>hello-springcloud-alibaba-nacos-provider</module>
+    <module>hello-springcloud-gateway</module>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+    </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.jacken.hellospringcloudgateway.HelloSpringcloudGatewayApplication</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
