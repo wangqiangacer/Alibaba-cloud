@@ -2,9 +2,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
-
-
+        server-addr: localhost:8848,localhost:8849,localhost:8850
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yaml
   application:
     name: nacos-consumer-feign
 server:

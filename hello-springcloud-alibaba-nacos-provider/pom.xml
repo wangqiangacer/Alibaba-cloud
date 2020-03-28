@@ -49,21 +49,7 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
-
-<!--    maven 配置多环境-->
-<!--    <profiles>-->
-
-<!--        <profile>-->
-<!--            <id>nacos-dev</id>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            <id>nacos-test</id>-->
-<!--        </profile>-->
-<!--        <profile>-->
-<!--            <id>nacos-prod</id>-->
-<!--        </profile>-->
-<!--    </profiles>-->
-
+    
     <build>
         <plugins>
             <plugin>

@@ -1,0 +1,18 @@
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8849,localhost:8850,localhost:8848
+#      config:
+#        server-addr: localhost:8848
+#        group: DEFAULT_GROUP
+#        file-extension: yaml
+#  application:
+#    name: nacos-provider
+#server:
+#  port: 18762
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
