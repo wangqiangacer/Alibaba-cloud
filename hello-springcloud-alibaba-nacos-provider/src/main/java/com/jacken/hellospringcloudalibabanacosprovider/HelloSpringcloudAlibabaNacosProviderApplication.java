@@ -15,6 +15,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * 4.application.yml
  *
  * nacos的集群搭建 1.配置同一个数据源 2. 修改启动的模式 starter.cmd -m cluster 以集群的模式启动
+ * 集群的IP地址不能为 127.0.0.1的形式的
+ *
  * spring.datasource.platform=mysql
  * db.num=1
  * db.url.0=jdbc:mysql://localhost:3306/test?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC

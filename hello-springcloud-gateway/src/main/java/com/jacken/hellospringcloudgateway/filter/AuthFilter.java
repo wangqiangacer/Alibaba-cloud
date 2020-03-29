@@ -35,9 +35,6 @@ public class AuthFilter implements GlobalFilter, Ordered {
             respData.put("cause","Token is empty");
 
             ObjectMapper objectMapper = new ObjectMapper();
-
-
-
             try {
                 byte[] bytes = objectMapper.writeValueAsBytes(respData);
                 DataBuffer wrap = response.bufferFactory().wrap(bytes);
