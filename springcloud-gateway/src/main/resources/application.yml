@@ -1,0 +1,39 @@
+#spring:
+#  application:
+#    name: spring-gateway
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
+#
+#        #路由网关配置 设置服务发现组件结合，这样可以采用服务名的路由策略  注册到nacos 通过服务名请求服务的地址
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          #配置路由规则
+#      routes:
+#        - id: NACOS-CONSUMER-FEIGN
+#          uri: lb://nacos-consumer-feign
+#          predicates:
+#            - Path=/**
+#        - id: NACOS-PROVIDER
+#            uri: lb://nacos-provider
+#            predicates:
+#            - Path=/provider/**
+#            filters:
+#            - RewritePath=/provider/(?<segment>.*), /$\{segment}
+#feign:
+#  sentinel:
+#    enabled: true
+##配置日志级别
+#logging:
+#  level:
+#    org.springframework.cloud.gateway: debug
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#server:
+#  port: 9090

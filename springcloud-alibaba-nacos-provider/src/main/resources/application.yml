@@ -1,0 +1,44 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yaml
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+  application:
+    name: nacos-provider
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/server1?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+server:
+  port: 18762
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.jacken.hellospringcloudalibabanacosprovider.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    use-actual-param-name: true
+#  打印sql执行语句
+logging:
+  level:
+    com:
+      jacken:
+        hellospringcloudalibabanacosprovider:
+          mapper: debug
