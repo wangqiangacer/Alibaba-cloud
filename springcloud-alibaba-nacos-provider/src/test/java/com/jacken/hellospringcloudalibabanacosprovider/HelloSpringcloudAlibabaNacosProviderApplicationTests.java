@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = HelloSpringcloudAlibabaNacosProviderApplication.class)
 public class HelloSpringcloudAlibabaNacosProviderApplicationTests {
 
 
@@ -30,6 +30,16 @@ public class HelloSpringcloudAlibabaNacosProviderApplicationTests {
         wrapper.gt("age",18);
         IPage<User> page = userMapper.selectPage(new Page<>(2, 2), wrapper);
         page.getRecords().forEach(System.out::println);
+    }
+
+
+    @Test
+    public  void insert() {
+        User user = new User();
+        user.setAge(34);
+        user.setEmail("www.baidu.com");
+        user.setName("xiaoming");
+        userMapper.insert(user);
     }
 
 }

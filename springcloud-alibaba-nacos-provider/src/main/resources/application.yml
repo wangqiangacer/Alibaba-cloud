@@ -35,6 +35,12 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     use-actual-param-name: true
+  #数据库设置自增  设置全局分布式唯一ID
+  global-config:
+    db-config:
+      id-type: ID_WORKER
+
+
 #  打印sql执行语句
 logging:
   level:
