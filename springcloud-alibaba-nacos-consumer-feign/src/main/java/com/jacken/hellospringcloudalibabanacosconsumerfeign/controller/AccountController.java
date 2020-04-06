@@ -1,7 +1,7 @@
 package com.jacken.hellospringcloudalibabanacosconsumerfeign.controller;
 
 import com.jacken.hellospringcloudalibabadependences.entity.User;
-import com.jacken.hellospringcloudalibabanacosconsumerfeign.feign.feignclient.UserFeignClient;
+import com.jacken.hellospringcloudalibabanacosconsumerfeign.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,22 +10,23 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author wangqiang
  * @version 1.0
- * @date 2020/4/6 12:14
+ * @date 2020/4/6 17:35
  */
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/account")
+public class AccountController {
 
     @Autowired
-    private UserFeignClient userService;
-
+    private AccountService accountService;
 
     /**
-     * 保存用户
+     * 保存账户信息
      * @param user
+     * @return
      */
-    @RequestMapping("/save")
-    public  void   saveUser(@RequestBody User user){
-        userService.save(user);
+    @RequestMapping("/insertAccount")
+    public  Boolean insertAccount(@RequestBody User user){
+     accountService.updateAccount(user);
+     return  true;
     }
 }

@@ -26,6 +26,7 @@ public class UserController {
      */
     @RequestMapping("/save")
     public  void   saveUser(@RequestBody User user){
+
         userService.saveUser(user);
     }
 }

@@ -6,6 +6,7 @@ import com.jacken.hellospringcloudalibabanacosprovider.mapper.UserMapper;
 import com.jacken.hellospringcloudalibabanacosprovider.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author wangqiang
@@ -18,6 +19,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private  UserMapper userMapper;
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void saveUser(User user) {
         userMapper.insert(user);
     }

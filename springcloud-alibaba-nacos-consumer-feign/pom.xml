@@ -77,6 +77,14 @@
         </dependency>
 
 
+        <!--分布式事务 seata 整合springboot-->
+        <dependency>
+            <groupId>io.seata</groupId>
+            <artifactId>seata-spring-boot-starter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

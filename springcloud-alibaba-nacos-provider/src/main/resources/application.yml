@@ -16,7 +16,7 @@
 #    url: jdbc:mysql://127.0.0.1:3306/server1?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 #    username: root
 #    password: root
-#    driver-class-name: com.mysql.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 #    type: com.alibaba.druid.pool.DruidDataSource
 #
 #server:
@@ -30,7 +30,7 @@
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #mybatis-plus:
-#  mapper-locations: classpath:mapping/*.xml
+#  mapper-locations: classpath:mapper/*.xml
 #  type-aliases-package: com.jacken.hellospringcloudalibabanacosprovider.entity
 #  configuration:
 #    map-underscore-to-camel-case: true
@@ -48,3 +48,8 @@
 #      jacken:
 #        hellospringcloudalibabanacosprovider:
 #          mapper: debug
+##分布式事务seata配置
+#seata:
+#  tx-service-group: my_test_tx_group
+#  service:
+#    grouplist: 127.0.0.1:8091

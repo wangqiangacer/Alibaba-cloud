@@ -1,7 +1,7 @@
 package com.jacken.hellospringcloudalibabanacosconsumerfeign.feign;
 
 import com.jacken.hellospringcloudalibabadependences.entity.User;
-import com.jacken.hellospringcloudalibabanacosconsumerfeign.service.UserFeignClient;
+import com.jacken.hellospringcloudalibabanacosconsumerfeign.feign.feignclient.UserFeignClient;
 import org.springframework.stereotype.Service;
 
 /**

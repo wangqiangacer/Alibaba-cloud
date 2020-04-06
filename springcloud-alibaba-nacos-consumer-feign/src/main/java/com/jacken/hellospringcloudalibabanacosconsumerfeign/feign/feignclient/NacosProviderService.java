@@ -1,4 +1,4 @@
-package com.jacken.hellospringcloudalibabanacosconsumerfeign.service;
+package com.jacken.hellospringcloudalibabanacosconsumerfeign.feign.feignclient;
 
 
 import com.jacken.hellospringcloudalibabanacosconsumerfeign.feign.NacosProviderHyxtrix;

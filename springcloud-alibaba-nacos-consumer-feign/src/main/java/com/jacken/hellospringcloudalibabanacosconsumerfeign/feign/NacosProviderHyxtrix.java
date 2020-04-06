@@ -1,6 +1,6 @@
 package com.jacken.hellospringcloudalibabanacosconsumerfeign.feign;
 
-import com.jacken.hellospringcloudalibabanacosconsumerfeign.service.NacosProviderService;
+import com.jacken.hellospringcloudalibabanacosconsumerfeign.feign.feignclient.NacosProviderService;
 import org.springframework.stereotype.Component;
 
 @Component
