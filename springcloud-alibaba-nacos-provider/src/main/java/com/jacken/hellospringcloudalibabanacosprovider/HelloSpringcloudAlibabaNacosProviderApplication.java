@@ -25,6 +25,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * db.user=root
  * db.password=root
  *
+ * *******************************
+ * 分布式事务的解决方案  seata
+ *
  */
 @SpringBootApplication
 @EnableDiscoveryClient

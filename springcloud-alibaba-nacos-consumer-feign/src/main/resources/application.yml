@@ -2,13 +2,13 @@
 #  cloud:
 #    nacos:
 #      discovery:
-#        server-addr: localhost:8848,localhost:8849,localhost:8850
+#        server-addr: localhost:8848
 #      config:
 #        server-addr: localhost:8848
 #        group: DEFAULT_GROUP
 #        file-extension: yaml
 #  application:
-#    name: nacos-consumer-feign
+#    name: nacos-consumer
 #server:
 #  port: 18763
 #management:

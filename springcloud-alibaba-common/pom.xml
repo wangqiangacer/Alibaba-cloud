@@ -9,15 +9,20 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jacken</groupId>
-    <artifactId>springcloud-alibaba-dependences</artifactId>
+    <artifactId>springcloud-alibaba-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pringcloud-alibaba-dependences</name>
-    <description>Demo project for Spring Boot</description>
-    <packaging>pom</packaging>
+    <name>springcloud-alibaba-common</name>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>

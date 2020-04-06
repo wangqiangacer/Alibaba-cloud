@@ -1,7 +1,7 @@
 package com.jacken.hellospringcloudalibabanacosprovider.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jacken.hellospringcloudalibabanacosprovider.entity.User;
+import com.jacken.hellospringcloudalibabadependences.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

@@ -37,4 +37,10 @@ public class NacosProviderController {
 
         return "HELLO NACOS"+message+"i am from "+port+"name:"+name+"username:"+username;
     }
+
+    @RequestMapping("/index")
+    public  String index(){
+
+        return "this is index";
+    }
 }
